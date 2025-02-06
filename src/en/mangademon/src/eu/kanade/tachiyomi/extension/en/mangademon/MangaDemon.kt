@@ -29,9 +29,9 @@ class MangaDemon : ParsedHttpSource() {
     override val name = "Manga Demon"
     override val baseUrl = "https://demonicscans.org"
 
-    override val client = network.cloudflareClient.newBuilder()
+    /** override val client = network.cloudflareClient.newBuilder()
         .rateLimit(1)
-        .build()
+        .build() */
 
     override fun headersBuilder() = super.headersBuilder()
         .add("Referer", "$baseUrl/")
